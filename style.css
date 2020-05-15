@@ -26,8 +26,8 @@ html , body{margin: 0;padding: 0}
 .prev, .next{cursor:pointer;position:absolute;top:50%;width:auto; margin-top:-22px;padding:16px;color:white;font-weight:bold;font-size:18px;transition:0.6s ease;border-radius: 0 3px 3px 0;}
 .next{right:0;border-radius: 3px 0 0 3px;}
 .prev:hover, .next:hover{background-color:rgba(0,0,0,0.8);}
-.dot{cursor:pointer;height:13px; weight:13px; margin:0 2px;background-color:#bbb;border-radius:50%;display:inline-block; transition:background-color 0.6s ease}
-.active,{background-color#717171}
+.dot{cursor:pointer;height:13px; margin:0 2px;background-color:#bbb;border-radius:50%;display:inline-block; transition:background-color 0.6s ease}
+.active{background-color#717171;}
 .rectanguar_dark{position: absolute; width: 162px; height: 93px; left: 106px; top: 523px; background: rgba(149, 148, 148, 0.5); border-radius: 51.5px;}
 .rectanguar_light{position: absolute; width: 162px; height: 93px; left: 106px; top: 523px; background: rgba(196, 196, 196, 0.75); border-radius: 51.5px; transform: rotate(-90deg);}
 .textpoly{font-family: Courier New; font-style: normal; font-weight: 250; font-size: 14px; line-height: 17px; text-align: center;letter-spacing: 0.05em;color: #000000;}
@@ -42,13 +42,113 @@ html , body{margin: 0;padding: 0}
 .ik_ll{position: absolute;width: 112px;height: 14px;left: 227px;top: 312px;background: rgba(221, 212, 212, 0.5);border: 0.33px solid #000000;border-radius: 3px;}
 .uzz{position: absolute;width: 112px;height: 14px;left: 177px;top: 329px;background: rgba(221, 212, 212, 0.5);border: 0.33px solid #000000;border-radius: 3px;}
 .carosel{position: absolute;width: 640px;height: 362px;top: 840px;margin-left: 50px;background: rgba(96, 95, 95, 0.5);opacity: 0.9;}
-.arrow{position: absolute;width: 70px;height: 70px;background-image: url("/images/arrow.png") no-repeat ; z-index:5}
-.to_right{left: 234px;top: 534px;} .to_up{left: 152px;top: 454px;transform: rotate(-90deg);} .to_left{left: 70px; top: 534px;transform: rotate(-180deg);} .to_down{left: 152px;top: 616px;transform: rotate(90deg);}
-.stop{background-image: url("/images/stop.png") no-repeat ;position: absolute;width: 67px;height: 45px;left: 155px;top: 547px;z-index:5}
-.robots_body{position: absolute;width: 70px;height: 61px;left: 717px;top: 621px;border: 1px solid #00FF19;box-sizing: border-box;z-index:5}
+.arrow{position: absolute;width: 70px;height: 70px; z-index:5}
+
+.to_right{left: 248px;top: 539px;} 
+.to_up{left: 156px;top: 440px;transform: rotate(-90deg);} 
+.to_left{left: 56px; top: 530px;transform: rotate(-180deg);} 
+.to_down{left: 148px;top: 626px;transform: rotate(90deg);}
+.stop{
+    position: absolute;
+    
+    left: 142px;
+    top: 540px;
+    z-index:5
+}
+
+
+.robots_body{
+    position: absolute;
+    width: 70px;
+    height: 61px;
+    left: 722px;
+    top: 550px;
+    border: 1px solid #00FF19;
+    box-sizing: border-box;
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    z-index: 5;
+}
+
 .slidecontainer {width: 15%;}
 .slider {position:absolute; left: 244px;top: 715px;-webkit-appearance: none;appearance: none;width: 15%;height: 6px;background:#777070;outline: none;opacity: 0.7;-webkit-transition: .2s;transition: opacity .2s;border-radius: 5px;   }
 .slider:hover {opacity: 1;}
 .slider::-webkit-slider-thumb {-webkit-appearance: none;appearance: none;width: 17px;height: 17px;background: #e4bbbb;cursor: pointer;border-radius: 50%;}
 .slider::-moz-range-thumb {width: 17px;height: 17px;background: #e4bbbb;cursor: pointer;border-radius: 50%;}
 /*.percents_of_speed dt{position:absolute;list-style:none; display: inline; margin:0; margin-right: 2px; top:735px;left: 244px; left font-style: normal;font-weight: normal;font-size: 9px;line-height: 11px;text-align: center;letter-spacing: -0.05em;color: #000000;}*/
+.percents_of_speed{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+       
+    font-family: Roboto Mono;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    top: 724px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    
+    color: #000000;} 
+.speed{
+    position: absolute;
+    width: 84px;
+    height: 22px;
+    left: 147px;
+    top: 707px;
+
+    font-family: Roboto Mono;
+    font-style: normal;
+    font-weight: 250;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: 0.05em;
+
+    color: #000000;
+}
+.zero{
+    left: 245px;
+}
+.ten{
+    left: 263px;
+    
+} 
+.twenty{
+    left: 285px;
+    
+} 
+.thirsty{
+    left: 307px;
+    
+} 
+.forty{
+    left: 329px;
+   
+} 
+.fifty{
+    left: 351px;
+   
+} 
+.sixty{
+    left: 373px;
+   
+} 
+.seventy{
+    left: 395px;
+   
+} 
+.eighty{
+    left: 417px;
+   
+} 
+.ninety{
+    left: 439px;
+    
+} 
+.one_thousand{
+    left: 461px;
+    
+}
